@@ -537,9 +537,9 @@ def pyodide_setup(clean=False):
     command += f' && python -m pip install --upgrade pip wheel pyodide-build==0.23.4'
     
     # Run emsdk install scripts and enter emsdk environment.
-    #
+    PYODIDE_EMSCRIPTEN_VERSION="3.1.46"
     command += f' && cd {dir_emsdk}'
-    command += ' && PYODIDE_EMSCRIPTEN_VERSION=3.1.46'
+    # command += ' && PYODIDE_EMSCRIPTEN_VERSION=3.1.46'
     command += ' && echo "### running ./emsdk install"'
     command += ' && ./emsdk install ${PYODIDE_EMSCRIPTEN_VERSION}'
     command += ' && echo "### running ./emsdk activate"'
