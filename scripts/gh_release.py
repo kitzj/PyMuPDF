@@ -539,7 +539,7 @@ def pyodide_setup(clean=False):
     # Run emsdk install scripts and enter emsdk environment.
     #
     command += f' && cd {dir_emsdk}'
-    command += ' && PYODIDE_EMSCRIPTEN_VERSION=$(pyodide config get emscripten_version)'
+    command += ' && PYODIDE_EMSCRIPTEN_VERSION=3.1.46'
     command += ' && echo "### running ./emsdk install"'
     command += ' && ./emsdk install ${PYODIDE_EMSCRIPTEN_VERSION}'
     command += ' && echo "### running ./emsdk activate"'
